@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 import tags from './tags.json'
 
+const TagsContainer = styled.section`
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 56px;
+`
+
 const TagTitulo = styled.h3`
     color: #D9D9D9;
     font-size: 24px;
     margin: 0;
-`
+`;
 
 const Tag = styled.button`
     font-size: 24px;
@@ -22,17 +29,19 @@ const Tag = styled.button`
     }
 `
 
-export default function Tags() {
-    return (
-        <>
-            <p>Busque por tags:</p>
-            {tags.map(tag => (
-                <Tag key={tag.id}>
-                    <TagTitulo>
-                        {tag.titulo}
-                    </TagTitulo>
-                </Tag>
-            ))}
-        </>
-    )
+const Div = styled.div`
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+`
+
+const Tags = () => {
+    return <TagsContainer>
+        <TagTitulo>Busque por tags:</TagTitulo>
+        <Div>
+            {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+        </Div>
+    </TagsContainer>
 }
+
+export default Tags

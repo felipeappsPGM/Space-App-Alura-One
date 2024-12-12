@@ -22,8 +22,10 @@ const TituloEstilizado = styled.h1`
     padding: 0 64px;
 `
 
-export default function Banner({ texto, backgroundImage }) {
+const Banner = ({texto, backgroundImage}) => {
     return (<FigureEstilizada $backgroundImage={backgroundImage}>
         <TituloEstilizado>{texto}</TituloEstilizado>
     </FigureEstilizada>)
 }
+
+export default Banner
