@@ -1,6 +1,18 @@
 import { createGlobalStyle } from "styled-components";
+import GandhiSansRegular from './fontes/GandhiSans-Regular.otf'
+import GandhiSansBold from './fontes/GandhiSans-Bold.otf'
 
 const EstilosGlobais = createGlobalStyle`
+
+@font-face {
+	font-family: 'GandhiSansRegular';
+	src: local('Gandhi Sans Regular'), local('GandhiSansRegular'), url(${GandhiSansRegular});
+}
+
+@font-face {
+	font-family: 'GandhiSansBold';
+	src: local('GandhiSansBold'), local('GandhiSansBold'), url(${GandhiSansBold});
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -26,6 +38,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: GandhiSansRegular;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -34,6 +47,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: GandhiSansRegular;
 }
 ol, ul {
 	list-style: none;
