@@ -21,7 +21,7 @@ const ImagensContainer = styled.section`
 `
 
 
-export default function Galeria({aoFotoSelecionada, fotos = [] }) {
+export default function Galeria({aoFotoSelecionada, aoAlternarFavorito, fotos = [] }) {
     return (
         <>
             <Tags />
@@ -32,6 +32,7 @@ export default function Galeria({aoFotoSelecionada, fotos = [] }) {
                     <ImagensContainer>
                         {fotos.map(foto => <Imagem 
                             aoZoomSolicitado ={aoFotoSelecionada}
+                            aoAlternarFavorito = {aoAlternarFavorito}
                             key={foto.id} 
                             foto={foto} />)
                         }
